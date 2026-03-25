@@ -32,6 +32,7 @@ if rent_input_method == "月租总金额":
         st.info(f"计算后每平米月租金额：{rent_per_square:.2f}元/平米/月")
     else:
         st.warning("请先输入面积")
+        rent_per_square = 0.0
 else:
     rent_per_square = st.number_input("每平米租金（元/平米/月）", min_value=0.0, value=0.0, step=100.0)
     rent = area * rent_per_sqare
