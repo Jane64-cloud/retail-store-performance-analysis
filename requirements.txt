@@ -1,3 +1,10 @@
+streamlit
+pandas
+numpy
+scikit-learn
+joblib
+
+
 # 数据处理与科学计算
 pandas==2.0.3
 numpy==1.24.3
