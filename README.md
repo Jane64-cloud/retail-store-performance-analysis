@@ -7,25 +7,34 @@
 
 #主要功能
 选择渠道（如交通枢纽、社区型商业等）
+
 选择城市等级（T1 ~ T5）
+
 输入门店面积（平方米）
+
 输入租金（支持两种方式：月租金总额 或 每平米月租金）
+
 一键预测日均交易数（ADT），并给出结果
 
 #安装依赖
 建议使用 Python 3.9 或更高版本，并创建虚拟环境。
 pip install -r requirements.txt
+
 #运行应用
 streamlit run compass_app.py
 
 #文件结构
-├── compass_app.py                  # Streamlit 应用主程序
-├── adt_predictor_rf.pkl    # 训练好的随机森林模型（示例）
-├── requirements.txt        # 项目依赖库列表
-├── README.md               # 项目说明
+compass_app.py                  # Streamlit 应用主程序
+
+adt_predictor_rf.pkl    # 训练好的随机森林模型（示例）
+
+requirements.txt        # 项目依赖库列表
+
+ README.md               # 项目说明
 
 #模型说明
 训练数据：某连锁咖啡品牌 7696 家稳定门店（开业≥6个月）的截面数据（FY26 P01 期）
+
 特征：渠道、城市等级、面积、月租金
 
 #目标：日均交易次数（ADT）
@@ -35,6 +44,9 @@ streamlit run compass_app.py
 
 #后续优化计划
 引入租金-收入比指标，辅助盈利分析
+
 开发 Web 小程序版本，支持移动端查询
+
 加入预测置信区间，量化不确定性
+
 支持多期预测（如开业第1个月、第6个月）
